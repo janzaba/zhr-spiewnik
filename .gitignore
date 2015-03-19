@@ -1,0 +1,16 @@
+.DS_Store
+*.swp
+*.sbx
+*.sxd
+*.bak
+*.sbd
+*.log
+*.gz
+*.out
+*.aux
+*.fls
+*.sxc
+*.fdb_latexmk
+*.sxc
+*.mx1
+.idea

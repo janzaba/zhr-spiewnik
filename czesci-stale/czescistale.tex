@@ -1,0 +1,70 @@
+\documentclass[pdftex,12pt,a5paper]{report}
+%%% PACKAGES %------------------------------------------
+% for graphic
+	\usepackage[pdftex]{graphicx}
+% for polish language
+	\usepackage[utf8]{inputenc}
+	\usepackage[bookmarks]{hyperref}
+	\usepackage{polski}
+	\usepackage[polish]{babel}
+	\usepackage{afterpage}
+% for margins and paper size
+	%A4 Portrait
+		%\usepackage[top=0.5in, bottom=0.7in, left=0.5in, right=0.5in, paperheight=11.7in,paperwidth=8.3in]{geometry}
+		
+	%A4 Horizontal
+		%\usepackage[top=0.5in, bottom=0.7in, left=0.5in, right=0.5in, paperheight=8.3in,paperwidth=11.7in]{geometry}	
+	%A5
+		\usepackage[top=0.3in, bottom=0.7in, left=0.1in, right=0.1in, paperheight=8.3in,paperwidth=5.8in]{geometry}
+	\usepackage{marginnote}
+% page size
+
+% for music
+	\usepackage[chorded]{songs}
+	%\chordsoff
+	\songcolumns{1}
+	%\renewcommand{\printchord}[1]{\rmfamily\bf#1}
+	%\renewcommand{\lyricfont}{\small}
+%%% ---------------------------------------------------
+
+% for music notes
+\usepackage{musixtex}
+
+\setlength{\parindent}{0mm}
+\setlength{\textwidth}{120mm}
+\setlength{\textheight}{200mm}
+\setlength{\topmargin}{-20mm}
+\setlength{\oddsidemargin}{-10mm}
+
+\nobarnumbers
+%%% ---------------------------------------------------
+
+%% INDEXES %------------------------------------------
+
+%\newindex{titleidx}{cbtitle}
+%\newcommand{\songlink}[2]{#2}
+%%% ---------------------------------------------------
+ 
+\begin{document}
+
+
+	
+	
+\instrumentnumber{1}
+\sepbarrules
+\setclef{1}{0}
+\staffbotmarg=4.8mm%
+\generalmeter{{\meterC}}
+
+\startpiece
+\NOtes \zsong{Ba -} \hu{e} \zsong{ran -} \qu{g} \zsong{ku} \qu{h}  \en \bar
+\NOtes \zsong{Bo - ży,} \hu{c} \qu{c} \en
+
+
+%\leftrepeat % 2
+%\bar % 3
+%\setrightrepeat % 4
+\stoppiece
+
+
+\end{document}

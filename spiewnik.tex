@@ -1,0 +1,70 @@
+\documentclass[pdftex,12pt,a5paper]{report}
+%%% PACKAGES %------------------------------------------
+% for graphic
+	\usepackage[pdftex]{graphicx}
+% for polish language
+	\usepackage[utf8]{inputenc}
+	\usepackage[bookmarks]{hyperref}
+	\usepackage{polski}
+	\usepackage[polish]{babel}
+	\usepackage{afterpage}
+% for margins and paper size
+	%A4 Portrait
+		%\usepackage[top=0.5in, bottom=0.7in, left=0.5in, right=0.5in, paperheight=11.7in,paperwidth=8.3in]{geometry}
+		
+	%A4 Horizontal
+		%\usepackage[top=0.5in, bottom=0.7in, left=0.5in, right=0.5in, paperheight=8.3in,paperwidth=11.7in]{geometry}	
+	%A5
+		\usepackage[top=0.3in, bottom=0.7in, left=0.1in, right=0.1in, paperheight=8.3in,paperwidth=5.8in]{geometry}
+	\usepackage{marginnote}
+% page size
+
+% for music
+	\usepackage[chorded]{songs}
+	%\chordsoff
+	\songcolumns{1}
+	%\renewcommand{\printchord}[1]{\rmfamily\bf#1}
+	%\renewcommand{\lyricfont}{\small}
+%%% ---------------------------------------------------
+ 
+%% COMMANDS %------------------------------------------
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+%%% ---------------------------------------------------
+
+%% INDEXES %------------------------------------------
+
+\newindex{titleidx}{cbtitle}
+%\newcommand{\songlink}[2]{#2}
+%%% ---------------------------------------------------
+
+%\renewcommand{\lyricfont}{\footnotesize}
+
+\begin{document}
+
+	% Title Page
+	\input{./title.tex} 
+	
+	%\clearpage
+	
+	\blankpage
+
+	%\songsection{}
+	\begin{songs}{titleidx}
+		% Religijne piosenki
+		\input{./religijne.tex}
+	\end{songs}
+	
+	% to generate new index go to songidx directory in terminal and call:
+	% ./songidx ../cbtitle.sxd ../cbtitle.sbx
+	% then compile this file again
+	\showindex[2]{Spis treści}{titleidx}
+	
+	\input{./parts/rozkladowka.tex} 
+
+\end{document}
