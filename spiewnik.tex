@@ -17,6 +17,8 @@
 	%A5
 		\usepackage[top=0.3in, bottom=0.7in, left=0.1in, right=0.1in, paperheight=8.3in,paperwidth=5.8in]{geometry}
 	\usepackage{marginnote}
+	\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+	\let\endchangemargin=\endlist 
 % page size
 
 % for music
@@ -52,7 +54,7 @@
 	
 	%\clearpage
 	
-	\blankpage
+	%\blankpage
 
 	%\songsection{}
 	\begin{songs}{titleidx}
