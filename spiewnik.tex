@@ -67,6 +67,9 @@
 	% then compile this file again
 	\showindex[2]{Spis treści}{titleidx}
 	
-	\input{./parts/rozkladowka.tex} 
+	\ifchorded
+		\input{./parts/rozkladowka.tex} 
+	\fi
+	
 
 \end{document}
