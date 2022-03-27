@@ -40,3 +40,11 @@ Wystarczy zakomentować aktualny format i odkomentować oczekiwany
 	\usepackage{marginnote}
 % page size
 ```
+
+#### Spisy treści
+Po każdym dodaniu pieśni lub zmianie tytułu należy przegenerować indeksu (spisy). 
+Mozna odświeżyć wszystkie spisy za pomocą skryptu:
+
+```
+sh ./reindex.sh
+```

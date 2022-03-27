@@ -42,6 +42,9 @@
 %% INDEXES %------------------------------------------
 
 \newindex{titleidx}{cbtitle}
+\newindex{wejscieidx}{wejscieidx}
+
+
 %\newcommand{\songlink}[2]{#2}
 %%% ---------------------------------------------------
 
@@ -62,12 +65,13 @@
 		\input{./religijne.tex}
 	\end{songs}
 	
-	% to generate new index go to songidx directory in terminal and call:
-	% ./songidx ../cbtitle.sxd ../cbtitle.sbx
-	% then compile this file again
-	\showindex[2]{Spis treści}{titleidx}
 	
 	\ifchorded
+		% to regenerate indexes run sh ./reindex.sh
+		% then compile this file again
+		\showindex[2]{Spis treści}{titleidx}
+		\showindex[2]{Pieśni na wejście}{wejscieidx}
+	
 		\input{./parts/rozkladowka.tex} 
 	\fi
 	
